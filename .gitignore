@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Airflow logs
+airflow/logs/
+
+# Airflow config
+airflow/airflow.cfg
+
+# Database files
+*.sqlite3
+orders_db
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
