@@ -8,7 +8,7 @@ from pymongo import MongoClient
 ## Extract
 def extract_orders():
     # Connect to postgresql:
-    postgre_engine = create_engine("postgresql://postgres:ABC%40123@localhost:5432/orders_db")
+    postgre_engine = create_engine("postgresql://postgres:ABC%40123@host.docker.internal:5432/orders_db")
 
     # create_engine = creates a communication bridge b/w python and postgreSQL
 
@@ -21,7 +21,7 @@ def extract_orders():
 
 def extract_customers():
     # Connect to MongoDB:
-    mongo_client = MongoClient("mongodb://localhost:27017/")
+    mongo_client = MongoClient("mongodb://host.docker.internal:27017/")
 
     # Access Database
     mongo_db = mongo_client["ecommerce_db"]
@@ -40,5 +40,5 @@ def extract_customers():
 
 def extract_products():
     # Read CSV file:
-    products_df = pd.read_csv("../data/products.csv")
+    products_df = pd.read_csv("/opt/airflow/data/products.csv")
     return products_df
