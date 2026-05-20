@@ -27,6 +27,25 @@ A multi-source ETL pipeline built using:
 - Automated orchestration using Airflow
 - Dockerized workflow execution
 
+## Project Structure
+
+```text
+project/
+│
+├── airflow/
+├── dags/
+├── etl/
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── main.py
+├── data/
+├── screenshots/
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+```
+
 ## Architecture
 
 ```text
