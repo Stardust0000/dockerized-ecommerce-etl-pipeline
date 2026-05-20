@@ -29,22 +29,24 @@ A multi-source ETL pipeline built using:
 
 ## Architecture
 
-PostgreSQL + MongoDB + CSV → ETL Pipeline → analytics_db
-
+```text
 PostgreSQL ─┐
-MongoDB ────┼──> ETL Pipeline ───> analytics_db
-CSV ────────┘
+MongoDB ────┼──> ETL Pipeline ───> PostgreSQL Analytics DB
+CSV ────────┘        |
                      │
                      ▼
-                 Airflow
-
+              Apache Airflow
+                     │
+                     ▼
+                 Power BI
+```
 
 ## Setup Instructions
 
 ### Clone Repository
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/Stardust0000/dockerized-ecommerce-etl-pipeline>
 cd ecommerce-etl-pipeline
 ```
 
@@ -59,3 +61,27 @@ pip install -r requirements.txt
 ```bash
 docker compose up
 ```
+
+## Airflow DAG Execution
+
+Successful orchestration of ETL pipeline using Apache Airflow.
+
+![Airflow DAG](screenshots/airflow-dashboard-2.png)
+
+## Execution History
+
+Pipeline debugging and successful reruns.
+
+![Airflow History](screenshots/airflow-dashboard-3.png)
+
+## Transformed Analytics Dataset
+
+Final transformed dataset loaded into PostgreSQL analytics database.
+
+![Analytics Table](screenshots/analytics_table.png)
+
+## Power BI Analytics Dashboard
+
+Interactive business analytics dashboard built using Power BI for sales insights, customer segmentation, and category-wise revenue analysis.
+
+![Power BI Dashboard](screenshots/Power_BI_Dashboard.png)
