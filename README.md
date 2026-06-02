@@ -65,7 +65,7 @@ CSV ────────┘        |
 ### Clone Repository
 
 ```bash
-git clone <https://github.com/Stardust0000/dockerized-ecommerce-etl-pipeline>
+git clone https://github.com/Stardust0000/dockerized-ecommerce-etl-pipeline.git
 cd ecommerce-etl-pipeline
 ```
 
